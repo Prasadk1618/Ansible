@@ -8,3 +8,6 @@ ansible-playbook (playbookName)
 ```bash
 ansible-playbook -i myhost.ini (playBook Name)
 ```
+
+### All Activity In Blog :-
+https://prasadblog.hashnode.dev/ansible
