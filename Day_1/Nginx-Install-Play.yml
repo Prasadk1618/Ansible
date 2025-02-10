@@ -1,0 +1,14 @@
+- name: Install Nginx Locally
+  hosts: localhost
+  become: yes  
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start and Enable Nginx Service
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
