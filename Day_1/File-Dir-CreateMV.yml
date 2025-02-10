@@ -1,0 +1,19 @@
+- name: myplay1
+  hosts: localhost
+  become: true
+  connection: local
+  tasks:
+     - name: Create A File..!!
+       file:
+         name: Ansible.txt
+         state: touch
+
+     - name: Create A Directory..!!
+       file:
+         name: AnsibleDir
+         state: directory
+
+     - name: Move Created File In Created Directory..!!
+       copy:
+         src: Ansible.txt   # Here Mention Which File Move..!!
+         dest: AnsibleDir/       # Here Mention Where Move Our File..!!
